@@ -1,0 +1,10 @@
+This is the template app for Tealeaf Academy. It's a bare bones Rails 3 app, with
+Twitter Bootstrap integrated. There are also layout modifications: a navigation partial
+and a message partial to display flash messages.
+
+To get started:
+1. bundle install
+2. rake db:create
+3. rake db:migrate
+4. rails server
+5. Navigate to localhost:3000

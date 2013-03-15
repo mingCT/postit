@@ -1,0 +1,22 @@
+<h3><%= @post.title %></h3>
+
+Body:
+<ul>
+<li>
+<%= @post.body %>
+</li>
+</ul>
+
+<br/>
+<h4>Comments:</h4>
+<ul>
+  <% @post.comments.each do |comment|  %>
+    <li>
+    	<%= comment.body  %>
+    	by:
+    	<%= comment.user.username %>
+    </li>
+  <% end %>  
+
+
+</ul>
