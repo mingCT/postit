@@ -3,8 +3,9 @@ Postit::Application.routes.draw do
 
   ####match '/posts/:id' => 'posts#show'
 
-  resources :posts, only: [:index, :show]
+  resources :posts, only: [:index, :show, :new, :create]
   resources :users, only: [:index, :show]
+
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
