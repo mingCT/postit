@@ -1,6 +1,16 @@
 <h3><%= @user.username %></h3>
 
 
+<h4>Posts:</h4>
+<ul>
+  <% @user.posts.each do |post|  %>
+    <li>
+    	<%= post.body  %>
+    </li>
+  <% end %>  
+
+
+</ul>
 
 
 <h4>Comments:</h4>

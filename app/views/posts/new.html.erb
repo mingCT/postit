@@ -1,8 +1,11 @@
-<h4> new post <h4>
+<h4> Add a post <h4>
 
 <%= form_for @post do |f| %>
-<%= f.text_field :title %>
-<%= f.text_area :body, rows: 5 %>
-<%= f.submit %>
+Title:<br>
+<%= f.text_field :title %><br>
+Body:<br>
+<%= f.text_area :body, rows: 5 %><br>
+<%= f.submit class: "btn btn-primary" %>
 
 <% end %>
+

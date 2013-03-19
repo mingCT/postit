@@ -5,7 +5,7 @@ Postit::Application.routes.draw do
 
   resources :posts, only: [:index, :show, :new, :create]
   resources :users, only: [:index, :show]
-
+  resources :comments, only: [:index, :show, :new, :create]
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
