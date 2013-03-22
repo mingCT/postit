@@ -2,7 +2,11 @@
 
 <ul>
 <% @posts.each do |post| %>
-  <li><%= link_to post.title, "/posts/#{post.id}" %></li>
+ <div class='span8'>
+ 	<h5><%= link_to post.title, fix_url(post.url) %></h5>
+ 	by <%= link_to post.user.username, user_path(post.user) %>
+ </div>
+
 <% end %>
 </ul>
 	

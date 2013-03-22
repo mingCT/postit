@@ -6,11 +6,19 @@ Body:
 <%= @post.body %>
 </li>
 </ul>
+<%= form_for [@post, @comment] do |f| %>
+  <%= render 'shared/errors', obj: @comment %>
 
+<%= f.label :body %>
+<%= f.text_area :body, rows: 5 %>
+<br>
+<%= f.submit "Create comment", class: 'btn btn-success' %>
+
+<% end %>
 <br/>
 <h4>Comments:</h4>
 <ul>
-  <% @post.comments.each do |comment|  %>
+  <% @post.comments.reload.each do |comment|  %>
     <li>
     	<%= comment.body  %>
     	by:
@@ -21,10 +29,3 @@ Body:
 
 </ul>
 
-
-<%= form_for @comment do |f| %>
-
-	<%= f.text_area :body, rows: 5 %>
-	<br>
-	<%= f.submit class: "btn btn-primary" %>
-<% end %>
